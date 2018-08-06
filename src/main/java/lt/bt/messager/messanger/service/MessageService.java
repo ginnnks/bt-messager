@@ -1,6 +1,7 @@
 package lt.bt.messager.messanger.service;
 
 import lt.bt.messager.messanger.dto.Message;
+import lt.bt.messager.messanger.dto.User;
 import lt.bt.messager.messanger.entity.MessageEntity;
 import lt.bt.messager.messanger.repository.MessageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,6 @@ public class MessageService {
 
     public void createMessage(Message message) {
         MessageEntity entity = new MessageEntity();
-
         entity.setMessage(message.getMessage());
 
         messageRepository.save(entity);
